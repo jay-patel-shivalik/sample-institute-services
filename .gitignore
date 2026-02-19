@@ -1,0 +1,17 @@
+node_modules
+.env
+package-lock.json
+.DS_Store
+Archive
+
+services/institute-services/node_modules
+services/institute-services/db_backups
+services/institute-services/.env.dev
+services/institute-services/.env.prod
+services/institute-services/.env.staging
+services/institute-services/package-lock.json
+services/institute-services/.DS_Store
+services/institute-services/src/migrate-mongo-config.js
+services/institute-services/src/logs
+
+helper/third-party-cred/*
