@@ -2,15 +2,11 @@ const messages = require("../message");
 const { randomInt } = require('crypto');
 const mongoose = require('mongoose');
 const ObjectId = mongoose.Types.ObjectId;
-const SendMail = require('../libs/sendMail.js')
-const sendOtp = require('../libs/sendOtp.js');
 const { projectFacebookLogger, anarockSPlusProjectLogger, instituteRoundRobinLogger } = require("../config/logger.js");
 const axios = require('axios');
 var crypto = require('crypto');
 const { parsePhoneNumber } = require('libphonenumber-js');
 const CommonConfig = require('../config/common.js');
-const InstituteLeadsModel = require('../models/instituteLeads.js');
-const InstituteLeadHisModel = require('../models/instituteLeadHis.js');
 
 // const UsersModel = require('../models/users.js');
 

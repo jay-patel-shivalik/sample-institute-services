@@ -7,10 +7,7 @@ const fs = require('fs');
 const { exec } = require('child_process');
 const archiver = require('archiver');
 const { cronLogger, sourceKeyRemoveLogger } = require('../config/logger');
-const InstituteLeadsModel = require('../models/instituteLeads.js');
-const InstituteSourceKeysModel = require('../models/instituteSourceKeys.js')
 const moment = require("moment");
-const SendMail = require('../libs/sendMail.js')
 const axios = require('axios');
 
 // MongoDB Atlas connection string
