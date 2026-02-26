@@ -6,7 +6,7 @@ const { commonStatus } = require('../config/data.js');
 const InstituteSubCoursesSchema = new Schema({
   instituteCourseId : {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'instituteCourse',
+    ref: 'institutecourses',
   },
   name: {
     type: String,
