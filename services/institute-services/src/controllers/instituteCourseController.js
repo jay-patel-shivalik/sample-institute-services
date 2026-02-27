@@ -931,6 +931,11 @@ const deleteBatch = async (req, res) => {
         if (lectureCount > 0) {
             return res.status(400).send(response.toJson(messages['en'].instituteCourse.batch_has_lectures));
         }
+        // checkin any student enrolled for batch
+        const enrollmentCount = await InstituteEnrollments.countDocuments({ batchId: batchId });
+        if (enrollmentCount > 0) {
+            return res.status(400).send(response.toJson(messages['en'].instituteCourse.enrollment_exists));
+        }
 
         await InstituteBatchesModel.findByIdAndUpdate(batchId, {
             isDeleted: true,
@@ -1216,7 +1221,7 @@ const subCourseDropdownList = async (req, res) => {
         //         response.toJson(messages['en'].auth.not_access)
         //     );
         // }
-        const baseQuery = { isDeleted: false };
+        const baseQuery = { isDeleted: false, status: "ACTIVE" };
         if (req.query.instituteCourseId) {
             baseQuery.instituteCourseId = req.query.instituteCourseId;
         }
@@ -1249,7 +1254,7 @@ const batchDropdownList = async (req, res) => {
         //         response.toJson(messages['en'].auth.not_access)
         //     );
         // }
-        const filters = { isDeleted: false };
+        const filters = { isDeleted: false, status: 'ACTIVE' };
 
         if (req.query.status) {
             req.query.status = String(req.query.status).toUpperCase();

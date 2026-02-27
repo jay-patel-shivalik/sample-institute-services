@@ -32,6 +32,7 @@ const message = {
       start_end_time_invalid: 'Start time must be before end time',
       course_exists: 'Course already exists,please try with other.',
       batch_has_lectures: 'Batch has lectures, please delete lectures before deleting batch.',
+      enrollment_exists: 'Batch has enrolled students, please delete enrollments before deleting batch.',
     },
     module: {
       already_exists: 'Module already exists,please try with other.',
@@ -72,6 +73,28 @@ const message = {
       tata_call_limit_exceeded: "Please wait at least 1 minutes before making another call.",
       tata_call_success: "Tata call initiated successfully..",
       import_success: "Institute Leads Imported Successfully"
+    },
+    instituteStudent: {
+      not_exists: 'Institute Student not exists,please try with other.',
+      batch_not_exist: 'Batch not exists,please try with other.',
+      email_exists: 'Student email already exists,please try with other.',
+      create_success: 'Student created successfully.',
+    },
+    instituteAsset: {
+      create_failure: 'Failed to create asset, please try again later.',
+      list_failure: 'Failed to fetch assets list, please try again later.',
+      not_exists: 'Asset not exists,please try with other.',
+      update_failure: 'Failed to update asset, please try again later.',
+      delete_failure: 'Failed to delete asset, please try again later.',
+      not_found: 'Asset not found.',
+    },
+    instituteEvents: {
+      create_failure: 'Failed to create event, please try again later.',
+      list_failure: 'Failed to fetch events list, please try again later.',
+      not_exists: 'Event not exists,please try with other.',
+      update_failure: 'Failed to update event, please try again later.',
+      delete_failure: 'Failed to delete event, please try again later.',
+      not_found: 'Event not found.',
     },
     project: {
       not_exists: 'Selected project is not exists,please try with another.',
